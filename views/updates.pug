@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    title Update Custom Object Form | Integrating With HubSpot | Practicum
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Update Custom Object Form
+    a(href="/") Return to the homepage
+    form(method="POST", action="/update-cobj")
+      div
+        label(for="firstname") Name:
+        input(type="text", id="firstname", name="firstname", required)
+      div  
+        label(for="lastname") Last Name:
+        input(type="text", id="lastname", name="lastname", required)
+      div
+        label(for="email") Email:
+        input(type="text", id="email", name="email", required)
+    
+      // Add other input fields for your custom properties here
+      div
+        input(type="submit", value="Submit")

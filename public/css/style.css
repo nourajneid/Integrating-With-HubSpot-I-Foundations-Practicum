@@ -1,0 +1,77 @@
+/* Reset some basic elements */
+body, h1, p, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a font to the whole body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header styles */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Link styles */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #5cb85c;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #f8f8f8;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
