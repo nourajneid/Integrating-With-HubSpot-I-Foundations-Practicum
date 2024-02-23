@@ -4,18 +4,18 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
-const PORT = process.env.PORT || 3000; // Use only one port variable
+const PORT = process.env.PORT || 3000; 
 
 app.set('view engine', 'pug');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Route for the homepage
+
 app.get('/', async (req, res) => {
     try {
         const response = await axios.get('https://api.hubapi.com/crm/v3/objects/contacts', {
             headers: {
-                Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`, // Include the API key in the request header
+                Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`, 
                 'Content-Type': 'application/json'
             }
         });
@@ -36,8 +36,7 @@ app.post('/update-cobj', async (req, res) => {
     try {
         const response = await axios.post('https://api.hubapi.com/crm/v3/objects/contacts', {
             properties: {
-                // Assuming 'name' is a valid property for your HubSpot account
-                // Otherwise, use 'firstname', 'lastname', 'email', etc.
+                
                 firstname: req.body.firstname,
                 lastname:req.body.lastname,
                 email:req.body.email
